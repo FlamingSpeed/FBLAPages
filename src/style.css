@@ -145,30 +145,64 @@ button, a.button {
 
 /* Value Proposition Section */
 .kevin {
-    padding: 80px 200px;
+    padding: 80px 20px; /* Adjusted padding for better responsiveness */
     text-align: center;
 }
 
 .kevin h2 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 40px;
-    margin-left: auto;
 }
 
-.text {
+.description {
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap; /* Allows elements to stack on smaller screens */
+}
+
+.description {
+    display: flex;
+    align-items: center; /* Vertically centers the text next to the image */
+    justify-content: flex-start; /* Aligns content to the start */
+    gap: 20px; /* Space between the image and text */
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.image img {
+    width: 300px; /* Adjust image width */
+    border-radius: 10px; /* Round the corners of the image */
 }
 
 .text {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    margin-left: auto; /* This will align the box to the right */
+    max-width: 500px; /* Control the maximum width of the text box */
+    text-align: justify; /* Justify the text for neat alignment */
+    margin: 0;
+    padding: 20px; /* Adds space inside the text box */
+    height: auto;
+    border: 2px solid #ddd; /* Adds a light gray border around the text */
+    border-radius: 10px; /* Optional: rounds the corners of the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to the box */
+    background-color: #f9f9f9; /* Optional: adds a light background color */
+}
 
+
+@media (min-width: 768px) {
+    /* Adjust layout for larger devices */
+    .description {
+        flex-direction: row; /* Horizontal layout on larger screens */
+    }
+
+    .image {
+        width: 40%; /* Image takes 40% of the space on larger screens */
+        height: auto;
+    }
+
+    .text {
+        width: 60%; /* Text takes the remaining 60% on larger screens */
+    }
 }
 
 
