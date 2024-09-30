@@ -9,6 +9,10 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f9fafb; /* Light gray background for sections */
     color: #333; /* Dark gray text for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    padding: 20px; /* Add some padding to body */
 }
 
 a {
@@ -18,7 +22,7 @@ a {
 
 /* Header Section */
 header {
-    background-color: #fff; /* White background for header */
+    background-color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -29,7 +33,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #3b82f6; /* Soft blue for the logo */
+    color: #3b82f6;
 }
 
 nav ul {
@@ -43,7 +47,7 @@ nav ul li {
 }
 
 .nav-links a {
-    color: #333; /* Dark gray text for menu links */
+    color: #333;
     font-weight: 500;
 }
 
@@ -55,20 +59,20 @@ nav ul li {
 .auth-buttons button,
 .auth-buttons a {
     padding: 10px 20px;
-    border: 2px solid #3b82f6; /* Soft blue border */
+    border: 2px solid #3b82f6;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .auth-buttons button {
-    background-color: #3b82f6; /* Soft blue background for Sign Up button */
-    color: #fff; /* White text for Sign Up */
+    background-color: #3b82f6;
+    color: #fff;
 }
 
 .auth-buttons a {
     background-color: transparent;
-    color: #3b82f6; /* Blue text for Login */
+    color: #3b82f6;
 }
 
 /* Hover Effects for Buttons */
@@ -80,32 +84,29 @@ button, a.button {
     transition: all 0.3s ease;
 }
 
-/* Primary Sign-Up Button */
 .cta-signup {
-    background-color: #3b82f6; /* Soft blue background */
-    color: white; /* White text */
+    background-color: #3b82f6;
+    color: white;
     border: 2px solid #3b82f6;
 }
 
 .cta-signup:hover {
-    background-color: #2563eb; /* Slightly darker blue on hover */
+    background-color: #2563eb;
     transform: scale(1.05);
 }
 
-/* Secondary Login Button */
 .cta-login, .auth-buttons a {
     background-color: transparent;
-    color: #3b82f6; /* Soft blue text */
+    color: #3b82f6;
     border: 2px solid #3b82f6;
 }
 
 .cta-login:hover, .auth-buttons a:hover {
-    background-color: #3b82f6; /* Soft blue background */
+    background-color: #3b82f6;
     color: white;
     transform: scale(1.05);
 }
 
-/* Learn More Button */
 .cta-learn-more {
     background-color: transparent;
     color: #3b82f6;
@@ -124,13 +125,13 @@ button, a.button {
     padding: 100px 20px;
     text-align: center;
     background-attachment: fixed;
-    color: #333; /* Change text color to dark gray for better readability */
+    color: #333;
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: #333; /* Dark text for the heading */
+    color: #333;
 }
 
 .hero p {
@@ -139,13 +140,12 @@ button, a.button {
     margin: 0 auto;
     margin-bottom: 40px;
     line-height: 1.5;
-    color: #333; /* Dark text for the paragraph */
+    color: #333;
 }
 
-
-/* Value Proposition Section */
+/* Name Section */
 .name {
-    padding: 80px 20px; /* Adjusted padding for better responsiveness */
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -154,173 +154,43 @@ button, a.button {
     margin-bottom: 40px;
 }
 
-.description {
+/* Flexbox for Image and Text */
+.container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Allows elements to stack on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between image and text */
+    margin: 40px auto; /* Center container with margin */
 }
 
-.description {
-    display: flex;
-    align-items: center; /* Vertically centers the text next to the image */
-    justify-content: flex-start; /* Aligns content to the start */
-    gap: 20px; /* Space between the image and text */
-    padding: 0;
-    margin: 0;
-    height: 100%;
+/* Image Styling */
+.image {
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Clip overflow */
 }
 
 .image img {
-    width: 300px; /* Adjust image width */
-    border-radius: 10px; /* Round the corners of the image */
+    width: 200px; /* Increased image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
 }
 
+/* Text Box Styling */
 .text {
-    max-width: 500px; /* Control the maximum width of the text box */
-    text-align: justify; /* Justify the text for neat alignment */
-    margin: 0;
-    padding: 20px; /* Adds space inside the text box */
-    height: auto;
-    border: 2px solid #ddd; /* Adds a light gray border around the text */
-    border-radius: 10px; /* Optional: rounds the corners of the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to the box */
-    background-color: #f9f9f9; /* Optional: adds a light background color */
+    padding: 20px; /* Padding for the text box */
+    max-width: 400px; /* Limit the width of the text box */
+    font-size: 18px; /* Increased font size for text */
+    border: 2px solid #ddd; /* Border around the text box */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background for the text box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-
+/* Larger screens */
 @media (min-width: 768px) {
-    /* Adjust layout for larger devices */
     .description {
-        flex-direction: row; /* Horizontal layout on larger screens */
+        flex-direction: row;
+        width: 70%;
     }
-
-    .image {
-        width: 50%; /* Image takes 40% of the space on larger screens */
-        height: auto;
-    }
-
-    .text {
-        width: 50%; /* Text takes the remaining 60% on larger screens */
-      	height: auto;
-    }
-}
-
-/* Value Proposition */
-.value-proposition {
-    padding: 80px 20px;
-    background-color: #f3f4f6; /* Light gray background */
-}
-
-.value-proposition h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 36px;
-}
-
-.value-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.value-card {
-    width: 30%;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.value-proposition h3 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #3b82f6; /* Soft blue for feature titles */
-}
-
-.value-proposition p {
-    color: #555;
-}
-
-/* Features Section */
-.features {
-    padding: 80px 20px;
-    background-color: #f3f4f6; /* Light gray background */
-}
-
-.features h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 36px;
-}
-
-.features-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.feature {
-    width: 30%;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.feature h3 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #3b82f6; /* Soft blue for feature titles */
-}
-
-.feature p {
-    color: #555;
-}
-
-/* Social Proof Section */
-.social-proof {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.social-proof h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.testimonial {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 18px;
-    color: #666;
-}
-
-.testimonial strong {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* Call to Action Section */
-.cta {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 /* Footer Section */
@@ -349,24 +219,4 @@ footer {
 .social-icons img {
     width: 24px;
     margin: 0 10px;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .value-cards,
-    .features-list {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .value-card,
-    .feature {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
