@@ -196,12 +196,13 @@ button, a.button {
     }
 
     .image {
-        width: 40%; /* Image takes 40% of the space on larger screens */
+        width: 50%; /* Image takes 40% of the space on larger screens */
         height: auto;
     }
 
     .text {
-        width: 60%; /* Text takes the remaining 60% on larger screens */
+        width: 50%; /* Text takes the remaining 60% on larger screens */
+      	height: auto;
     }
 }
 
