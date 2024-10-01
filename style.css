@@ -163,7 +163,7 @@ button, a.button {
 
 .description {
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-start; /* Align items to the left */
     gap: 20px; /* Space between the image and text */
     padding: 0;
     margin: 0;
@@ -171,21 +171,23 @@ button, a.button {
 }
 
 .image img {
-    width: 50%; /* Increase image width to take 50% of the container */
+    width: 35%; /* Increase image width to about 45% */
+    margin-left: -20%; /* Move image a bit to the left */
     border-radius: 10px; /* Round the corners of the image */
 }
 
 .text {
-    max-width: 500px; /* Keep the text box width the same */
-    text-align: justify; /* Justify the text for neat alignment */
+    max-width: 500px; /* Control the text box width */
+    text-align: justify; /* Justify the text */
     margin: 0;
-    padding: 20px; /* Adds space inside the text box */
+    padding: 20px;
     height: auto;
-    border: 2px solid #ddd; /* Adds a light gray border around the text */
-    border-radius: 10px; /* Rounds the corners of the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    background-color: #f9f9f9; /* Light background color */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
+
 
 
 @media (min-width: 768px) {
