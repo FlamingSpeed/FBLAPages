@@ -172,7 +172,6 @@ button, a.button {
 
 .image img {
     width: 35%; /* Increase image width to about 45% */
-    margin-left: -20%; /* Move image a bit to the left */
     border-radius: 10px; /* Round the corners of the image */
 }
 
