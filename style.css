@@ -163,7 +163,7 @@ button, a.button {
 
 .description {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: center; /* Align items to the left */
     gap: 20px; /* Space between the image and text */
     padding: 0;
     margin: 0;
