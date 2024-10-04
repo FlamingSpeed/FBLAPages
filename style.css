@@ -9,6 +9,11 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f9fafb; /* Light gray background for sections */
     color: #333; /* Dark gray text for readability */
+    background-image: url('stacked-waves-haikei.png');
+    background-size: cover; /* This makes the image cover the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
 }
 
 a {
@@ -124,7 +129,8 @@ button, a.button {
     padding: 100px 20px;
     text-align: center;
     background-attachment: fixed;
-    color: #333; /* Change text color to dark gray for better readability */
+    color: #333;
+     /* Change text color to dark gray for better readability */
 }
 
 .hero h1 {
@@ -209,7 +215,11 @@ button, a.button {
 /* Value Proposition */
 .value-proposition {
     padding: 80px 20px;
-    background-color: #f3f4f6; /* Light gray background */
+    background-image: url('stacked-waves-haikei1.png');
+        background-size: cover; /* This makes the image cover the whole background */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+ /* Light gray background */
 }
 
 .value-proposition h2 {
